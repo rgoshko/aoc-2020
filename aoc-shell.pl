@@ -18,6 +18,10 @@ use strict;
 # Main
 #---------------------------------------------------------------------------
 
+my $programName = $0;
+$programName =~ s/.*\///;
+print( "$programName -- [name]] -- AoC Day xx -- Part 1/2\n\n");
+
 if ( @ARGV > 0 ) {
 
     my $file = $ARGV[0];
@@ -40,8 +44,6 @@ if ( @ARGV > 0 ) {
     printf( "Data Lines Loaded: %d\n\n", $dataLineCount );
 
 } else {
-    my $programName = $0;
-    $programName =~ s/.*\///;
     print( "Usage:\n\n");
     print( "     $programName <data file>\n")
 }
